@@ -1,0 +1,9 @@
+FROM centos:7
+MAINTAINER anu.jose.py@gmail.com
+SHELL ["/bin/sh","-c"]
+COPY index.php /tmp
+ADD build.yaml /
+RUN yum install which -y
+RUN yum install net-tools -y
+ENV JAVA_HOME=/usr
+CMD /bin/bash

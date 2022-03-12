@@ -1,0 +1,12 @@
+Run Nginx webserver in a container using dockerfile 
+------------------------------------------------------
+
+cd
+mkdir webserver
+cd webserver
+vim index.html
+vim Dockerfile
+docker build -t mynginx:v1 .
+docker run -d -p 80:80 mynginx:v1
+docker ps
+curl http://localhost:80

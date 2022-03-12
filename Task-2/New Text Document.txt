@@ -1,0 +1,21 @@
+Create a Docker file with below details.
+Copy index.php to /tmp. Copy build.yaml to / . Install packages "which" and "net-tools" .
+Set JAVA_HOME to /usr. Run bash shell as PID 1.
+Build the docker image. Create a container from it. 
+-----------------------------------------------------------------------------
+
+mkdir app
+cd app
+touch index.php
+touch build.yaml
+vim Dockerfile
+docker build -t centos-java:latest .
+docker run -it --name centosv1 centos-java:latest
+ls
+cd tmp
+ls
+cd
+echo $JAVA_HOME
+which bash
+ifconfig
+exit

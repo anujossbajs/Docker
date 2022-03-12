@@ -1,0 +1,5 @@
+FROM nginx:alpine
+MAINTAINER anu.jose.py@gmail.com
+COPY . /usr/share/nginx/html
+EXPOSE 80 80
+ENTRYPOINT ["nginx","-g","daemon off;"]

@@ -1,0 +1,14 @@
+Docker installation on Linux
+----------------------------------
+
+su - redhat
+curl -fsSL get.docker.com |sh
+systemctl start docker
+systemctl enable docker
+docker info 
+exit
+usermod -aG docker redhat
+id redhat
+su - redhat
+docker info 
+docker run hello-world
