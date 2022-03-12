@@ -1,0 +1,21 @@
+Create a local registry . 
+Push the nginx image from previous task into the local Registry.
+Remove the image from the local cache and Pull the image from the local registry.
+Push the image to the Docker Hub.
+---------------------------------------------------------------------------------
+
+docker run -d -p 5000:5000 --restart=always --name registry registry:2
+docker ps
+docker images
+docker tag mynginx:v1 localhost:5000/mynginxv1
+docker images
+docker push localhost:5000/mynginxv1
+curl localhost:5000/v2/_catalog
+docker rmi mynginx:v1
+docker rmi localhost:5000/mynginxv1
+docker images
+docker pull localhost:5000/mynginxv1
+docker images
+docker login --username=anujose1234
+docker tag localhost:5000/mynginxv1 anujose1234/mynginx:webserver1
+docker push anujose1234/mynginx:webserver1
