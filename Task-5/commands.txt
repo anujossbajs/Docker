@@ -1,0 +1,21 @@
+Create a Docker Compose YAML file with 2 services sshd and a webserver. Create dockerfile if needed.
+For ssh create a user "student" with password "student" . Map the container port to host port 2222.
+Run the image using docker compose.
+----------------------------------------------------------------------------
+
+
+sudo curl -L "https://github.com/docker/compose/releases/download/1.26.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/bin/docker-compose
+du -sh /usr/local/bin/docker-compose
+sudo chmod +x /usr/local/bin/docker-compose
+docker-compose --version
+mkdir repo
+cd repo
+vim docker-compose.yaml
+mkdir sshd
+cd sshd
+vim Dockerfile
+ls -ltr
+docker-compose up -d
+docker ps
+docker network ls
+ssh -p 2222 student@localhost
