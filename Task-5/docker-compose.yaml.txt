@@ -6,7 +6,6 @@ services:
     ports:
       - "2222:22"
   webserver:
-    build: webserver
     image: nginx:latest
     ports:
       - "80:80"
