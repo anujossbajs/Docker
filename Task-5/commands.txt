@@ -1,5 +1,6 @@
-Create a Docker Compose YAML file with 2 services sshd and a webserver. Create dockerfile if needed.
-For ssh create a user "student" with password "student" . Map the container port to host port 2222.
+Create a Docker Compose YAML file with 2 services sshd and a webserver.
+For ssh create a user "student" with password "student" . Map the container port to host port 2222. 
+For webserver use nginx image from docker hub .
 Run the image using docker compose.
 ----------------------------------------------------------------------------
 
@@ -14,6 +15,7 @@ vim docker-compose.yaml
 mkdir sshd
 cd sshd
 vim Dockerfile
+cd ..
 ls -ltr
 docker-compose up -d
 docker ps
