@@ -6,9 +6,10 @@ curl -fsSL get.docker.com |sh
 systemctl start docker
 systemctl enable docker
 docker info 
-exit
+su -
 usermod -aG docker redhat
 id redhat
+exit
 su - redhat
 docker info 
 docker run hello-world
